@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="css/homePage.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Portal<span class="highlight">4</span>U</h1>
+            </div>
+            <nav>
+                <ul>
+                    <!--- This contains link to pages made by Rishabh. Replace Links with appropiate file names. -->
+                    <li><a href="/homePage">Home</a></li>
+                    <li><a href="/documents">Documents</a></li>
+                    <li><a href="/userIssue">Complaint</a></li>
+                    <li><a href="/notices">News</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li class="login" style="background-color: #e8491d;"><a class="login_link" href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>HOME</h1>
+        </div>
+    </section>
+        <div class="container">
+
+            <div class="mid">
+                <div class="search">
+                    <h3>Proudly Serving</h3>
+                    <form action="/status=search" method="post" class="searchbar">
+                        <input type="number" placeholder="Check Status" name="homesearch" id="homesearch" required>
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div th:if="${status_code=='1'}" id="popup1" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="/status=close">&times;</a>
+                        <div class="issue">
+
+                            <div class="user">
+                                <div class="userimage"></div>
+                                <p><span><td th:text="${issueItem.id}"/></span></p>
+                            </div>
+                    
+                            <div class="curr_status">
+                                <td th:text="${issueItem.status}" />
+                            </div>
+                    
+                    
+                            <div class="location">
+                                <a style="text-decoration:none; color:black;" href="/" th:href="${issueItem.location}"><i style="margin-right: 8px;" class="fa fa-globe" aria-hidden="true"></i> Location</a>
+                            </div>
+                    
+                            <div class="tags">
+                                <ul>
+                                    <span th:each="tag : ${issueItem.tags}">
+                                        <li><a href="#" class="tag"><td th:text="${tag}"/></a></li>
+                                    </span>
+                                </ul>
+                            </div>
+                    
+                            <div class="ping">
+                                <a href="#" ><td th:text="${issueItem.ping}"/></a>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="aboutUs">
+                    <h1>About Us</h1>
+                    <p><strong>Portal4U</strong> is a platform designed to ease the communication between the government and the citizens. Users can report various issues in their societies which will be prioritized
+                        based on how many similar issues were submitted in the same location. They will also receive regular updates on all government news and notices, along with guidelines for
+                        different government formalities and procedures.</p>
+                </div>
+            </div>
+
+            <div class="options">
+                <form method="get" action="/userIssue">
+                    <button type="submit"><i class="fas fa-certificate"></i> User Issues</button>
+                </form>
+                <form method="get" action="/notices">
+                    <button type="submit"><i class="fas fa-certificate"></i> Important Notices</button>
+                </form>
+                <form method="get" action="/login">
+                    <button type="submit"><i class="fas fa-certificate"></i>Login</button>
+                </form>
+                <form method="get" action="/documents">
+                    <button type="submit"><i class="fas fa-certificate"></i>Goverment Services</button>
+                </form>
+            </div>
+
+        </div>
+    <footer>
+        <p>Portal4U | An initiative by G.R.A.S.P.</p>
+    </footer>
+    <script src="js/issuelist.js"></script>
+    </body>
+</html>

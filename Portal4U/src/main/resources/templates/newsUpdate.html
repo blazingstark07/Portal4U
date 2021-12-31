@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="News form page of Portal4U">
+  <meta name="keywords" content="">
+  <meta name="author" content="G.R.A.S.P">
+  <title>Portal4U | Documents</title>
+  <link rel="stylesheet" href="css/newsUpdate.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1>Portal<span class="highlight">4</span>U</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/mun">Issue List</a></li>
+          <li class="login" style="background-color: #e8491d;"><a class="login_link" href="/logout">Log Out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <div class="newsform">
+      <h1>News Upload Form</h1>
+    </div>
+    <div class="main">
+
+      <form method="POST">
+        <h2 class="name">Title </h2>
+        <input class="title" type="text" name="title">
+
+        <h2 class="name">Summary</h2>
+        <textarea class="summary" id="summary" name="summary" rows="2" cols="50">
+        </textarea>
+
+
+        <h2 class="name">Date</h2>
+        <input class="date" type="date" name="date">
+
+        <h2 class="name">Priority</h2>
+        <select class="option" name="subject">
+          <option disabled="disabled" selected="selected">--Choose option--</option>
+          <option>High</option>
+          <option>Moderate</option>
+          <option>Low</option>
+        </select>
+
+        <h2 class="name">Type</h2>
+        <select class="option" name="subject">
+          <option disabled="disabled" selected="selected">--Choose option--</option>
+          <option>Announcement</option>
+          <option>Article</option>
+          <option>General News</option>
+        </select>
+
+        <h2 class="name">File</h2>
+        <input type="file" id="file" accept="application/pdf">
+        <label for="file">
+          <i class="icons">
+          </i> &nbsp;
+          Choose a File
+        </label>
+
+        <button type="submit">Upload</button>
+
+
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Portal4U | An initiative by G.R.A.S.P.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Issues</title>
+
+        <link rel="stylesheet" href="css/userIssues.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Portal<span class="highlight">4</span>U</h1>
+            </div>
+            <nav>
+                <ul>
+                    <!--- This contains link to pages made by Rishabh. Replace Links with appropiate file names. -->
+                    <li><a href="/homePage">Home</a></li>
+                    <li><a href="/documents">Documents</a></li>
+                    <li><a href="/userIssue">Complaint</a></li>
+                    <li><a href="/notices">News</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>USER ISSUE</h1>
+            <p>submit your issue here</p>
+        </div>
+    </section>
+        <div class="centerDiv">
+
+
+            <form action="/addIssue" method="post">
+                <div class="left">
+                    <input class="input__field input__field--haruki" type="text" name="name" id="name" placeholder="Name" required>
+                    <br><br>
+                    <input class="input__field input__field--haruki" type="email" name="email" id="email" placeholder="Email" required>
+                    <br><br>
+                    <label class="checkbox_c" for="issue1">Waste Management
+                    <input class=""type="checkbox" name="issue1" id="issue1" value="WasteManagement">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                    <label class="checkbox_c" for="issue2">Sewage
+                    <input type="checkbox" name="issue2" id="issue2" value="Sewage">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                    <label class="checkbox_c" for="issue3">Electricity
+                    <input type="checkbox" name="issue3" id="issue3" value="Electricity">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                    <label class="checkbox_c" for="issue4">Traffic Flow and Control
+                    <input type="checkbox" name="issue4" id="issue4" value="Traffic">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                    <label class="checkbox_c" for="issue5">Environment
+                    <input type="checkbox" name="issue5" id="issue5" value="Environment">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                    <label class="checkbox_c" for="issue6">Public Property Damage
+                    <input type="checkbox" name="issue6" id="issue6" value="PropertyDamage">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                    <label class="checkbox_c" for="issue7">Other
+                    <input type="checkbox" name="issue7" id="issue7" value="Other">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                </div>
+
+                <div class="right">
+                    <textarea class="input__field input__field--haruki" name="details" id="details" cols="60" rows="10" placeholder="Write your issue here." style="margin: 0px; height: 249px; width: 501px;"></textarea>
+                    <br><br>
+                    <button type="button" class="forimage">Add Image</button>
+                    <br>
+                    <div class="imagesubmit">
+                        <label for="img">Select image:</label>
+                        <input type="file" name="img" id="img" accept="image/*">
+                        <br><br>
+                    </div>
+                    <button type="button" style="margin-bottom:0px;" class="forlocation">Get Location</button>
+                    <input style="visibility:hidden;" type="text" id="longitude" name="longitude" required>
+                    <input style="visibility:hidden;" type="text" id="latitude" name="latitude" required>
+                    <p style="margin-bottom:15px;margin-left:30px;font-size:15px;color:#0a3d62;font-weight:bold;">
+                        Enter your live location using Get Location before submitting</p>
+                    <input type="submit" id="sumbit" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <p>Portal4U | An initiative by G.R.A.S.P.</p>
+        </footer>
+
+        <script src="js/userIssues.js"></script>
+
+    </body>
+</html>

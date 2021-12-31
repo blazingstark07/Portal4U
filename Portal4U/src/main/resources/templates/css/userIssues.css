@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Josefina Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: darkgray;
+}
+
+h4 {
+    font-size: 25px;
+    padding: 10px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    background-color: #ff9933;
+    font-family: 'Roboto', sans-serif;
+}
+
+.images {
+    height: 350px;
+    width: 100%;
+    background-image: url('../img/issues.jpg');
+    background-size: 1200px 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imagesubmit, .getlocation {
+    display: none;
+    margin-left: 15px;
+}
+
+h5 {
+    margin-left: 50px;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+form {
+    max-height: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left{
+    display: inline-block;
+}
+
+.right{
+    width:500px;
+}
+
+textarea {
+    background-color: #d3d3d3;
+}
+
+.centerDiv{
+    border: darkblue;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f1f3f3;
+}
+
+form button{
+  width: calc(100% - 40px);
+  height: 30px;
+  display: block;
+  margin: auto;
+  color: white;
+  background-color: #EE5A24;
+  border: none;
+}
+
+form button:hover{
+     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+     background-color:#EA2027;
+     font-size: 15px;
+   }
+
+input[type=submit] {
+  width: calc(100% - 150px);
+    height: 30px;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: #EE5A24;
+    border: none;
+}
+
+input[type=submit]:hover {
+         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+         background-color:#EA2027;
+         font-size: 15px;
+}
+
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.button_1{
+  height:38px;
+  background:#e8491d;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.dark{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header **/
+header{
+  background:#35424a;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#e8491d 3px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#e8491d;
+  font-weight:bold;
+}
+
+header a:hover{
+   color:#e8491d;
+  font-weight:bold;
+}
+
+/* Showcase */
+#showcase{
+  min-height:400px;
+  background:url('../img/showcase.jpg') no-repeat 0 -400px;
+  text-align:center;
+  color:#ffffff;
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+/* Boxes */
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+#boxes .box img{
+  width:90px;
+}
+
+/* Sidebar */
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width:90%;
+  padding:5px;
+}
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+footer{
+  padding:2px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#e8491d;
+  text-align: center;
+}
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+
+
+
+
+  .input--haruki {
+  	margin: 4em 1em 1em;
+  }
+
+  .input__field--haruki {
+  	padding: 0.4em 0.25em;
+  	width: 100%;
+  	background: transparent;
+  	color: black;
+  	font-size: 16px;
+  }
+
+  .input__label--haruki {
+  	position: absolute;
+  	width: 100%;
+  	text-align: left;
+  	pointer-events: none;
+  }
+  .input__field--haruki::hover{
+    text-transform:uppercase;
+  }
+
+  .input__label-content--haruki {
+  	transition: transform 0.3s;
+  }
+
+  .input__label--haruki::before,
+  .input__label--haruki::after {
+  	content: '';
+  	position: absolute;
+  	left: 0;
+  	z-index: -1;
+  	width: 100%;
+  	height: 4px;
+  	background: #6a7989;
+  	transition: transform 0.3s;
+  }
+
+  .input__label--haruki::before {
+  	top: 0;
+  }
+
+  .input__label--haruki::after {
+  	bottom: 0;
+  }
+
+  .input__field--haruki:focus + .input__label--haruki .input__label-content--haruki,
+  .input--filled .input__label-content--haruki {
+  	transform: translate3d(0, -90%, 0);
+  }
+
+  .input__field--haruki:focus + .input__label--haruki::before,
+  .input--filled .input__label--haruki::before {
+  	transform: translate3d(0, -0.5em, 0);
+  }
+
+  .input__field--haruki:focus + .input__label--haruki::after,
+  .input--filled .input__label--haruki::after {
+  	transform: translate3d(0, 0.5em, 0);
+  }
+
+
+.checkbox_c {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_c input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_c:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_c input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_c input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_c .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

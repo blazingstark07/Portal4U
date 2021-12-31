@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portal4U - Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Portal<span class="highlight">4</span>U</h1>
+            </div>
+            <nav>
+                <ul>
+                    <!--- This contains link to pages made by Rishabh. Replace Links with appropiate file names. -->
+                    <li><a href="/homePage">Home</a></li>
+                    <li><a href="/documents">Documents</a></li>
+                    <li><a href="/userIssue">Complaint</a></li>
+                    <li><a href="/notices">News</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bgimg">
+        <div class="centerdiv">
+            <img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png" id="profilepic">
+            <h2>login</h2>
+            <div th:if="${isError == '1'}" class="error">*user name or password is wrong</div>
+            <form action="/valid" method="post">
+                <input type="text" class="inputbox" placeholder="Username" id="username" name="username" required><br>
+                <input type="password" class="inputbox" placeholder="Password" id="password" name="password" required><br>
+                <input type="submit" class='button' value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

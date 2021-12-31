@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Issue List</title>
+
+        <link rel="stylesheet" href="css/issuelist.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Portal<span class="highlight">4</span>U</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <!--- This contains link to pages made by Rishabh. Replace Links with appropiate file names. -->
+                        <li><a href="/news_update">News Update</a></li>
+                        <li class="login" style="background-color: #e8491d;"><a class="login_link" href="/logout">Log Out</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <section id="showcase">
+            <div class="container">
+                <h1>ISSUE LIST</h1>
+            </div>
+        </section>
+        
+        <div class="list">
+
+            <tr th:each="issueItem : ${issueList}">
+
+                <div class="issue">
+
+                    <div class="user">
+                        <div class="userimage"></div>
+                        <p><span><td th:text="${issueItem.id}"/></span></p>
+                    </div>
+
+                    <div class="curr_status">
+                        <td th:text="${issueItem.status}" />
+                    </div>
+
+
+                    <div class="location">
+                        <a style="text-decoration:none; color:black;" href="/" th:href="${issueItem.location}"><i style="margin-right: 8px;" class="fa fa-globe" aria-hidden="true"></i> Location</a>
+                    </div>
+
+                    <div class="tags">
+                        <ul>
+                            <span th:each="tag : ${issueItem.tags}">
+                                <li><a href="#" class="tag"><td th:text="${tag}"/></a></li>
+                            </span>
+                        </ul>
+                    </div>
+
+                    <div class="ping">
+                        <a href="#" ><td th:text="${issueItem.ping}"/></a>
+                    </div>
+
+                    <div class="status">
+                        <div class="statbuttons">
+                            <form action="/status=ongoing" method="post">
+                                <input type="hidden" id="id_o" name="id_o" th:value="${issueItem.id}">
+                                <button type="submit">Ongoing</button>
+                            </form>
+                            <form action="/status=solved" method="post">
+                                <input type="hidden" id="id_s" name="id_s" th:value="${issueItem.id}">
+                                <button type="submit">Solved</button>
+                            </form>
+                            <form action="/status=planning" method="post">
+                                <input type="hidden" id="id_p" name="id_p" th:value="${issueItem.id}">
+                                <button type="submit">Planning</button>
+                            </form>
+                        </div>
+                        <form action="update=comment" method="post">
+                            <label for="comment"></label>
+                            <input type="hidden" id="id_comment" name="id_comment" th:value="${issueItem.id}">
+                            <input type="text" id="comment" name="comment" th:placeholder="${issueItem.comment}">
+                            <input type="submit" id="submit" value="+">
+                        </form>
+                    </div>
+
+                </div>
+
+            </tr>
+
+        </div>
+
+        <script src="js/issuelist.js"></script>
+
+    </body>
+</html>
